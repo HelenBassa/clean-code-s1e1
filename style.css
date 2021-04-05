@@ -1,48 +1,48 @@
 /* Basic Style */
-.body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
 
-.img {
+.page__header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.img .image {
+.header__image {
   width: 100%;
 }
 
-.img .more-info {
+.header__more-info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .img { 
+  .page__header { 
     text-align: center;
   }
 
 }
 
-.main {
+.page__main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
+.add-item__input,
 .item__lable,
-.item__text-input,
-.add-item__input {
+.item__input--text {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.form {
+.add-item__form {
   display: flex;
 }
 
@@ -88,7 +88,7 @@ button {
 }
 
 .add-item__input,
-.item__text-input {
+.item__input--text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -102,13 +102,13 @@ button {
 }
 
 .add-item__input:focus,
-.item__text-input:focus {
+.item__input--text:focus {
   color: #333;
 }
 
 /* New Task */
 
-.add-item__title {
+.add-item__label {
   display: block;
   margin: 0 0 20px;
 }
@@ -133,49 +133,49 @@ button {
   vertical-align: middle;
 }
 
-.item > .item__checkbox-input {
+.item__input--checkbox {
   margin: 0 10px;
 }
 
-.item > .item__lable {
+.item__lable {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.item > .item__text-input {
+.item__input--text {
   width: 226px;
 }
 
-.item__del-img {
+.item__img--delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.item__del-img:hover {
+.item__img--delete:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-.list#completed-tasks .item__lable {
+.completed__list .item__lable {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.list .item .item__text-input {
+.item__input--text {
   display: none;
 }
 
-.list .item.edit-mode .item__text-input {
+.edit-mode .item__input--text {
   display: inline-block;
   width: 224px;
 }
 
-.list .item.edit-mode .item__lable {
+.edit-mode .item__lable {
   display: none;
 }
